@@ -1,0 +1,101 @@
+/*
+ * 컬러 팔레트 디자인 시스템.md 의 CSS 변수 정의를 그대로 옮긴 파일입니다.
+ * 출처: 당근 비즈니스 (business.daangn.com) / SEED 디자인 시스템
+ */
+
+:root {
+  /* Primary Colors */
+  --color-primary: #FF6600;
+  --color-primary-light: #FFF2EC;
+  --color-primary-dark: #E14D00;
+
+  /* Secondary Colors */
+  --color-secondary: #1A1C20;
+  --color-accent: #FFE8DB;
+
+  /* Background Colors */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F3F4F5;
+
+  /* Text Colors */
+  --color-text-primary: #1A1C20;
+  --color-text-secondary: #555D6D;
+  --color-text-muted: #868B94;
+
+  /* Interactive Colors */
+  --color-button-primary: #FF6600;
+  --color-button-hover: #E14D00;
+  --color-link: #FF6600;
+  --color-link-hover: #E14D00;
+
+  /* Border Colors */
+  --color-border: #D1D3D8;
+  --color-border-light: #EAEBEE;
+  --color-border-hover: rgba(255, 111, 15, 0.5);
+
+  color-scheme: light;
+}
+
+/* 다크모드: 운영체제 설정을 따름 (사용자가 라이트를 직접 고르지 않은 경우) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-primary: #FF6600;
+    --color-primary-light: #31241F;
+    --color-primary-dark: #FF9E65;
+    --color-secondary: #F3F4F5;
+    --color-accent: #4B291C;
+    --color-bg-primary: #16171B;
+    --color-bg-secondary: #1D2025;
+    --color-text-primary: #F3F4F5;
+    --color-text-secondary: #DCDEE3;
+    --color-text-muted: #B0B3BA;
+    --color-button-primary: #FF6600;
+    --color-button-hover: #E65200;
+    --color-link: #FF9364;
+    --color-link-hover: #FFB999;
+    --color-border: #5B606A;
+    --color-border-light: #2B2E35;
+    color-scheme: dark;
+  }
+}
+
+/* 다크모드: 사용자가 직접 선택한 경우 */
+:root[data-theme="dark"] {
+  --color-primary: #FF6600;
+  --color-primary-light: #31241F;
+  --color-primary-dark: #FF9E65;
+  --color-secondary: #F3F4F5;
+  --color-accent: #4B291C;
+  --color-bg-primary: #16171B;
+  --color-bg-secondary: #1D2025;
+  --color-text-primary: #F3F4F5;
+  --color-text-secondary: #DCDEE3;
+  --color-text-muted: #B0B3BA;
+  --color-button-primary: #FF6600;
+  --color-button-hover: #E65200;
+  --color-link: #FF9364;
+  --color-link-hover: #FFB999;
+  --color-border: #5B606A;
+  --color-border-light: #2B2E35;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-link);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
